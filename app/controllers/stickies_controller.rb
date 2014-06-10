@@ -5,5 +5,6 @@ class StickiesController < ApplicationController
 
   def stickies
     @owner = params[:owner]
+    @notes = Note.find_all_by_owner(@owner)
   end
 end

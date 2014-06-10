@@ -32,8 +32,4 @@ module Helpers
   def have_an_empty_sticky
     have_selector('.sticky')
   end
-
-  def reload_page
-    visit current_path
-  end
 end

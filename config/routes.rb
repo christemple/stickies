@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get '/:owner', to: 'stickies#stickies'
 
+  get  '/:owner/notes', to: 'notes#index'
+  post '/:owner/notes', to: 'notes#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

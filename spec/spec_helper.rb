@@ -11,4 +11,8 @@ Capybara.javascript_driver = :webkit
 RSpec.configure do |config|
   config.include Helpers
   config.order = "random"
+  config.infer_spec_type_from_file_location!
+  config.before(:each) do
+    Note.collection.remove
+  end
 end
